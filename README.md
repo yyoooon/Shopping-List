@@ -1,5 +1,5 @@
 # ShoppingList
-javascript를 사용해 TodoList어플리케이션을 만들었습니다.  
+javascript를 사용해 ShoppingList어플리케이션을 만들었습니다.  
 
 **구현 기능 목록**
 - 리스트 추가
