@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active {
+  outline: none;
+  box-shadow: none;
+}
+
+button {
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  background: transparent;
+}
+
+input {
+  border: none;
+}
+
+button,
+input,
+textarea {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+}
+
+/* ------------------------------------------------- */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Serif KR", serif;
+}
+
+section {
+  position: relative;
+}
+
+.shoppingList-page {
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 15px #bebebe;
+}
+
+/* header */
+
+.shoppingList-page header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(90deg, #e1b8d0, #91b5e7);
+}
+
+.shoppingList-page header h1 {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* list */
+
+.shoppingList-list {
+  height: 450px;
+  overflow-y: auto;
+  background-color: #f0eef6;
+}
+
+.shoppingList-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 32px;
+  /* 높이를 패딩으로 준 것 -> height를 줄 경우 패딩을 줘도
+   height값으로 유지 됨 */
+}
+.item_text {
+  position: relative;
+  cursor: pointer;
+}
+
+.item_text.finished::after{
+  content: "";
+  display: block;
+  clear: both;
+  width: 100%;
+  border: 0.5px solid rgba(0,0,0,0.5);
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  cursor: pointer;
+}
+
+.mod {
+  background-color: #91b5e7;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  font-size: 16px;
+  transition: all 200ms ease-in;
+}
+
+.icon:last-child {
+  margin-right: 0;
+}
+
+.icon:hover {
+  color: tomato;
+  transform: scale(1.1);
+}
+
+.all-del {
+  position: absolute;
+  right: 15px;
+  bottom: 90px;
+  border-radius: 8px;
+  padding: 5px 8px;
+  text-align: center;
+  background-color: #91b5e7;
+}
+
+/* form */
+
+.shoppingList-form {
+  background: linear-gradient(90deg, #e1b8d0, #91b5e7);
+  border-radius: 0 0 20px 20px;
+}
+
+.list-input {
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  padding: 0 16px;
+}
+
+.add-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  font-size: 25px;
+  transition: all 200ms ease-in;
+}
+
+.add-list:hover {
+  transform: scale(1.1);
+}
